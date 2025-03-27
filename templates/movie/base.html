@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>电影</title>
+
+    <!-- 网站图标 -->
+    <link rel="shortcut icon" href="{% static 'movie/favicon1.ico' %}"/>
+    <link rel="bookmark" href="{% static 'movie/favicon1.ico' %}"/>
+
+    <!-- 引入 jQuery（使用官方 CDN 以避免证书问题） -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- 引入 Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- 引入 Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<!-- 导航栏 -->
+<nav class="navbar navbar-default navbar-static-top">
+    <div class="container">
+        <!-- 品牌和菜单按钮 -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{% url 'movie:index' %}">首页</a>
+        </div>
+
+        <!-- 导航栏内容 -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="{% url 'movie:hot' %}">热门电影</a></li>
+                <li><a href="{% url 'movie:tag' %}">电影分类</a></li>
+            </ul>
+
+            <!-- 搜索框 -->
+            <form class="navbar-form navbar-left" method="GET" action="{% url 'movie:search' %}">
+                <div class="form-group">
+                    <input type="search" name="keyword" class="form-control" placeholder="Search" required>
+                </div>
+                <button type="submit" class="btn btn-default">搜索</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                {% if movie_user %}
+                    <li><a href="{% url 'movie:history' movie_user.id %}">评分历史</a></li>
+                    <li><a href="{% url 'movie:recommend' %}">推荐列表</a></li>
+                    <li><a href="{% url 'movie:logout' %}">退出登录</a></li>
+                {% else %}
+                    <li><a href="{% url 'movie:register' %}">注册/登录</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</nav>
+
+{% block content %}
+{% endblock %}
+
+</body>
+</html>
