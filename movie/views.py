@@ -243,7 +243,7 @@ class RegisterView(View):
         form = RegisterForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect(reverse('movie:index'))
+            return render(request, 'Signin.html', {'register_success': True})
         else:
             errors = form.get_errors()
             # 传递一个标志变量，指示显示注册表单
