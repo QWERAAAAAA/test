@@ -1,0 +1,150 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" version="26.1.3">
+  <diagram id="recommendation_flow" name="推荐生成流程">
+    <mxGraphModel dx="776" dy="555" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="3" value="用户请求推荐" style="swimlane;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="40" y="80" width="290" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="fXKFxe-76s7JFF_PX8fm-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="3" source="5" target="fXKFxe-76s7JFF_PX8fm-42">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5" value="检查用户登录状态" style="rhombus;fillColor=#fff2cc;strokeColor=#d6b656;" parent="3" vertex="1">
+          <mxGeometry x="115" y="40" width="100" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="6" value="检查用户评分数量" style="rhombus;fillColor=#fff2cc;strokeColor=#d6b656;" parent="3" vertex="1">
+          <mxGeometry x="115" y="240" width="100" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="7" value="返回个性化推荐结果" style="rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="3" vertex="1">
+          <mxGeometry x="90" y="350" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="9" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="3" source="4" target="6" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="190" y="250" as="sourcePoint" />
+            <mxPoint x="240" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="10" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="3" source="6" target="7" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="190" y="250" as="sourcePoint" />
+            <mxPoint x="240" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="11" value="已登录" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="3" vertex="1">
+          <mxGeometry x="165" y="130" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="12" value="≥10条" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="3" vertex="1">
+          <mxGeometry x="165" y="320" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="34" value="未登录" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="3" vertex="1">
+          <mxGeometry x="60" y="50" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="36" value="&lt;10条" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="3" vertex="1">
+          <mxGeometry x="50" y="250" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="fXKFxe-76s7JFF_PX8fm-41" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="3" source="5" target="4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="245" y="270" as="sourcePoint" />
+            <mxPoint x="245" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4" value="访问推荐页面" style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="3" vertex="1">
+          <mxGeometry x="90" y="170" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="fXKFxe-76s7JFF_PX8fm-42" value="注册/登录" style="rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;whiteSpace=wrap;" vertex="1" parent="3">
+          <mxGeometry x="10" y="110" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="13" value="推荐计算流程" style="swimlane;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="360" y="80" width="360" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="fXKFxe-76s7JFF_PX8fm-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="13" source="14" target="23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="14" value="检查推荐缓存" style="rhombus;fillColor=#fff2cc;strokeColor=#d6b656;" parent="13" vertex="1">
+          <mxGeometry x="120" y="40" width="100" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="15" value="获取用户评分数据" style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="13" vertex="1">
+          <mxGeometry x="95" y="160" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="16" value="基于ALS矩阵分解计算推荐" style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="13" vertex="1">
+          <mxGeometry x="95" y="230" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="17" value="按预测评分排序电影" style="rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="13" vertex="1">
+          <mxGeometry x="95" y="290" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="18" value="缓存推荐结果" style="rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="13" vertex="1">
+          <mxGeometry x="95" y="350" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="19" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="13" source="14" target="15" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="170" y="250" as="sourcePoint" />
+            <mxPoint x="220" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="20" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="13" source="15" target="16" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="170" y="250" as="sourcePoint" />
+            <mxPoint x="220" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="21" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="13" source="16" target="17" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="170" y="250" as="sourcePoint" />
+            <mxPoint x="220" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="22" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="13" source="17" target="18" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="170" y="250" as="sourcePoint" />
+            <mxPoint x="220" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="23" value="直接返回缓存结果" style="rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;whiteSpace=wrap;" parent="13" vertex="1">
+          <mxGeometry x="270" y="130" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="25" value="有缓存" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="13" vertex="1">
+          <mxGeometry x="230" y="60" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="26" value="无缓存" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="13" vertex="1">
+          <mxGeometry x="170" y="130" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="27" value="返回热门电影" style="swimlane;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="40" y="500" width="680" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="28" value="评分&lt;10条" style="rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="27" vertex="1">
+          <mxGeometry x="60" y="40" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="29" value="按评分人数降序排列电影" style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="27" vertex="1">
+          <mxGeometry x="265" y="40" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="30" value="返回热门电影列表" style="rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="27" vertex="1">
+          <mxGeometry x="470" y="40" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="31" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="27" source="28" target="29" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="300" y="240" as="sourcePoint" />
+            <mxPoint x="350" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="32" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="27" source="29" target="30" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="300" y="240" as="sourcePoint" />
+            <mxPoint x="350" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fXKFxe-76s7JFF_PX8fm-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="6" target="28">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="80" y="360" />
+              <mxPoint x="80" y="560" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fXKFxe-76s7JFF_PX8fm-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="7" target="14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
